@@ -53,4 +53,33 @@ class ThingTest < Minitest::Test
   end
 
 
+  def test_return_type
+    assert_raises TypeError do
+      thing_or_things(1) { true }
+    end
+
+    assert_raises TypeError do
+      thing_or_things(1, 2, 3) {|things| things }
+    end
+  end
+
+
+  def test_missing_key
+    assert_raises KeyError do
+      thing_or_things(1) { {} }
+    end
+
+    assert_raises KeyError do
+      thing_or_things(1, 2) { { 1 => 1 } }
+    end
+  end
+
+
+  def test_extra_key
+    assert_raises KeyError do
+      thing_or_things(1) { { 1 => 1, 2 => 2 } }
+    end
+  end
+
+
 end
