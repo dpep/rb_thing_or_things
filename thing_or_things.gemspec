@@ -1,16 +1,10 @@
-$LOAD_PATH.unshift 'lib'
-package_name = File.realpath(File.dirname(__FILE__)).split('/').last
-lib_name = package_name.gsub '-', '_'
-require lib_name
-
-
 Gem::Specification.new do |s|
-  s.name        = package_name
+  s.name        = 'thing_or_things'
   s.version     = '0.0.1'
   s.authors     = ['Daniel Pepper']
-  s.summary     = 'thing_or_things'
+  s.summary     = 'ThingOrThings'
   s.description = 'Making gets and multigets one and the same'
-  s.homepage    = "https://github.com/dpep/rb_#{lib_name}"
+  s.homepage    = 'https://github.com/dpep/rb_thing_or_things'
   s.license     = 'MIT'
 
   s.files       = Dir.glob('lib/**/*')
