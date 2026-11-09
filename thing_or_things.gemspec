@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'rake', '~> 10'
   s.add_development_dependency 'minitest', '~> 5'
-  s.add_development_dependency 'byebug', '~> 9'
+  s.add_development_dependency 'debug'
   s.add_development_dependency 'awesome_print', '~> 1'
 end
